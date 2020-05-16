@@ -34,8 +34,8 @@
 
 @media screen and (max-width:1120px){
     .container-fix{
-        width:100%;
-        max-width:100%;
+        width:calc(100% - 15px);
+        max-width:calc(100% - 15px);
         padding-left:15px;
     }
 }

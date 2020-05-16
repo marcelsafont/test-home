@@ -65,6 +65,11 @@ p{
     background-color: $secondary;
 }
 
+.img-responsive{
+    width:100%;
+    height:auto
+}
+
 .form-component{
     position:relative;
     padding:0.3rem 1.3rem;
@@ -137,13 +142,15 @@ p{
     position:relative;
     background:url('../images/header.jpg') no-repeat top left;
     background-size:cover;
-    height:700px;
     .container-fix{
         display:flex;
         justify-content: flex-start;
         .content{
             width:445px;
         }
+    }
+    p{
+        font-size:1.2rem;
     }
     
 }
@@ -218,14 +225,44 @@ p{
     }
 }
 
+#menu-toggle{
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 1;
+    span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: $white;
+        border-radius: 3px;
+        z-index: 1;
+    }
+    
+}
 
+
+@media screen and (max-width:1140px){
+    #header{
+        height:500px;
+    }
+}
+
+@media screen and (min-width:1140px){
+    #header{
+        height:650px;
+    }
+}
 
 @media screen and (max-width:1120px){
     #header{
         height:400px;
     }
     #main-nav .container .col-second{
-        align-items: start;
+        align-items:flex-end;
     }
     #main-nav{
         .col-second{
@@ -235,4 +272,53 @@ p{
             width:100%;
         }
     } 
+    h1{
+        font-size:2.5rem;
+        line-height:1;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
 }
+
+@media screen and (max-width:768px){
+    #menu-toggle{
+        display:block;
+    }
+    #main-nav .container .col-second{
+        display:none;
+    }
+    h3{
+        font-size:1.4rem;
+    }
+
+    .form-component{
+        border-bottom:1px solid $forth;
+    }
+    #header{
+        background-image:none;
+        background-color:$primary;
+        .container-fix{
+            justify-content: center;
+        }
+    }
+    .logo{
+        width:100px;
+    }
+
+    #footer{
+        padding:15px;
+        .grid-2{
+            .info{
+                flex-basis:auto;
+                margin-bottom:1rem;
+            }
+        }
+        .grid-3{
+            flex-direction:row;
+            justify-content: center;
+        }
+    }
+}
+
