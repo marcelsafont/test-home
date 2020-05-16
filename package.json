@@ -1,0 +1,32 @@
+{
+  "name": "gulp-4-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/marcel_safont/gulp-4-bolierplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/marcel_safont/gulp-4-bolierplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-webp": "^5.1.0",
+    "save": "^2.4.0"
+  }
+}
