@@ -89,14 +89,17 @@ p{
             outline:none;
             + label{
                 top:5px;
+                left:10px;
                 color:$secondary;
                 font-size:0.6rem;
+                width:100%;
             }
         } 
     }
     label{
         position:absolute;
         top:15px;
+        left:10px;
         color:$terciary;
         font-family: 'inter-semibold';
         transition:all .3s ease;

@@ -128,13 +128,16 @@ p.small {
 
 .form-component input:focus + label {
   top: 5px;
+  left: 10px;
   color: #f2541b;
   font-size: 0.6rem;
+  width: 100%;
 }
 
 .form-component label {
   position: absolute;
   top: 15px;
+  left: 10px;
   color: #122251;
   font-family: 'inter-semibold';
   -webkit-transition: all .3s ease;
