@@ -14,8 +14,8 @@ $terciary:#122251;
 	@font-face {
     font-display: fallback;
 		font-family: $family;
-		src: url('#{$path}#{$fontName}/#{$fontName}.woff') format('woff'),
-		url('#{$path}#{$fontName}/#{$fontName}.woff2') format('woff2');
+		src: url('#{$path}#{$fontName}/#{$fontName}.woff2') format('woff2'),
+		url('#{$path}#{$fontName}/#{$fontName}.woff') format('woff');
 		font-style: $style;
 		font-weight: $weight;
 	}

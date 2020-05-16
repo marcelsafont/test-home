@@ -15,11 +15,11 @@ function css(){
 	return gulp.src('./src/sass/**/*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
-		outputStyle: 'compressed',
+		outputStyle: 'expanded',
 	}))
-	.pipe(rename({
-		suffix: '.min'
-	}))
+	// .pipe(rename({
+	// 	suffix: '.min'
+	// }))
 	.pipe(autoprefixer('last 2 versions'))
 	.on('error', function (err) {
       console.log(err.message + ' on line ' + err.lineNumber + ' in file : ' + err.fileName);

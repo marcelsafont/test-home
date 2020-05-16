@@ -124,7 +124,8 @@ p{
             }
             p{
                 line-height:2;
-                padding-top:0;
+                margin-top:0;
+
             }
         }
         .social{
@@ -234,14 +235,32 @@ p{
     span{
         display: block;
         width: 33px;
-        height: 4px;
+        height: 3px;
         margin-bottom: 5px;
         position: relative;
         background: $white;
-        border-radius: 3px;
+        border-radius: 0px;
         z-index: 1;
     }
-    
+    &.active{
+        span{
+            opacity: 1;
+            transform: rotate(45deg) translate(-4px, -4px);
+        }
+        span:nth-last-child(3){
+            opacity:0;
+        }
+        span:nth-last-child(2){
+            transform: rotate(-45deg) translate(0, 0);
+        }
+    }
+}
+
+@media screen and (min-width:1140px){
+    #header{
+        background:url('../images/bg-person.png') no-repeat bottom right $primary;
+        background-size:500px;
+    }
 }
 
 
@@ -259,7 +278,7 @@ p{
 
 @media screen and (max-width:1120px){
     #header{
-        height:400px;
+        height:450px;
     }
     #main-nav .container .col-second{
         align-items:flex-end;
@@ -288,6 +307,30 @@ p{
     }
     #main-nav .container .col-second{
         display:none;
+        &.show-menu{
+            background-color:$primary;
+            display:block;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            padding-bottom:1rem;
+            .nav{
+                ul{
+                    display:block;
+                    li{
+                        display:block;
+                        margin-bottom:1rem;
+                    }
+                }
+            }
+            .grid-3.social{
+                margin-top:1rem;
+                justify-content: center;
+                flex-direction:row;
+            }
+            box-shadow:2px 2px $white;
+        }
     }
     h3{
         font-size:1.4rem;
@@ -302,9 +345,13 @@ p{
         .container-fix{
             justify-content: center;
         }
+        p{
+            font-size:1rem;
+            line-height:1;
+        }
     }
     .logo{
-        width:100px;
+        width:110px;
     }
 
     #footer{
