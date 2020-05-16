@@ -197,7 +197,7 @@
                     margin-right:1rem;
                 }
                 .btn-form{
-                    @include btnForm($secondary, $secondary, 'transparent', $primary, $white);
+                    @include btnForm($secondary, $secondary, $white, $primary, $white);
                     input{
                         padding:10px 50px;
                     }
@@ -222,8 +222,17 @@
             height:320px;
         }
     }
-    .container-fix{
-        width:auto;
-        max-width:1120px;
+    
+    .container{
+        padding-right:15px;
+        padding-left:15px;
     }
+    .cm-donate .items{
+        flex-wrap:wrap;
+        > div{
+            flex-basis:calc(33% - 20px);
+        }
+    }
+   
+
 }

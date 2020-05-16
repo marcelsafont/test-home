@@ -31,3 +31,11 @@
         justify-content: space-between;
     }
 }
+
+@media screen and (max-width:1120px){
+    .container-fix{
+        width:100%;
+        max-width:100%;
+        padding-left:15px;
+    }
+}
