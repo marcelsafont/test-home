@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Politica';
+    src: url('Politica-ExtraBold.eot');
+    src: url('Politica-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Politica-ExtraBold.woff2') format('woff2'),
+        url('Politica-ExtraBold.woff') format('woff'),
+        url('Politica-ExtraBold.ttf') format('truetype'),
+        url('Politica-ExtraBold.svg#Politica-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+

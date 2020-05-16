@@ -1,47 +1,81 @@
-// Toggles
-//
-// Used in conjunction with global variables to enable certain theme features.
+$primary:#233a7a;
+$secondary: #f2541b;
+$white:#fff;
+$black:#181c26;
+$terciary:#122251;
 
-// Vendor
-@import "vendor/rfs";
 
-// Deprecate
-@import "mixins/deprecate";
+@mixin setPath($string){
+    $path: $string !global;
+}
 
-// Utilities
-@import "mixins/breakpoints";
-@import "mixins/hover";
-@import "mixins/image";
-@import "mixins/badge";
-@import "mixins/resize";
-@import "mixins/screen-reader";
-@import "mixins/size";
-@import "mixins/reset-text";
-@import "mixins/text-emphasis";
-@import "mixins/text-hide";
-@import "mixins/text-truncate";
-@import "mixins/visibility";
+@mixin fontFace($family,$fontName,$style: normal,$weight: normal) {
+	@font-face {
+    font-display: fallback;
+		font-family: $family;
+		src: url('#{$path}#{$fontName}/#{$fontName}.woff') format('woff'), // standards
+		url('#{$path}#{$fontName}/#{$fontName}.woff2') format('woff2');
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
 
-// Components
-@import "mixins/alert";
-@import "mixins/buttons";
-@import "mixins/caret";
-@import "mixins/pagination";
-@import "mixins/lists";
-@import "mixins/list-group";
-@import "mixins/nav-divider";
-@import "mixins/forms";
-@import "mixins/table-row";
+@mixin btnForm( $border: $white, $color:$black, $bg:'transparent') {
+	input[type=submit] {
+		background-color:$bg;
+		background-image:none;
+		height:60px;
+		border:2px solid $border;
+		width:100%;
+		font-family:'politica-bold';
+		font-size:1rem;
+		color:$color;
+		text-transform: uppercase;
+		letter-spacing:1.5px;
+		outline:none;
+		cursor:pointer;
+	}
+}
 
-// Skins
-@import "mixins/background-variant";
-@import "mixins/border-radius";
-@import "mixins/box-shadow";
-@import "mixins/gradients";
-@import "mixins/transition";
+@mixin genericLink( $bgcolor: $secondary, $colortext: $white, $bghover: $secondary, $colorhover:$white) {
+	a {
+		background-color:$bgcolor;
+		color:$colortext;
+		display:inline-block;
+		width:100%;
+		text-align:center;
+		letter-spacing:1.5px;
+		transition:all .5s;
+		&:hover{
+			background-color:$bghover;
+			color:$colorhover;
+		}
+	}
+}
 
-// Layout
-@import "mixins/clearfix";
-@import "mixins/grid-framework";
-@import "mixins/grid";
-@import "mixins/float";
+@mixin titleArrow($color: $white){
+	h2{
+        font-size:56px;
+		position:relative;
+        &:after{
+            position:absolute;
+            left:0;
+            bottom:-10px;
+            content:"";
+            width: calc( 50% - 10px);
+            height: 1px;
+            border: solid 1px $color;
+			background-color: $color;
+        }
+        &:before{
+            position:absolute;
+            right:0;
+            bottom:-10px;
+            content:"";
+            width: calc( 50% - 10px);
+            height: 1px;
+            border: solid 1px $color;
+            background-color: $color;
+        }
+    }
+}

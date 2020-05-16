@@ -1,65 +1,295 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/global.min.css">
+  <link rel="stylesheet" href="css/layout.min.css">
+  <link rel="stylesheet" href="css/components.min.css">
+</head>
+<body>
+  <div id="main-nav">
+    <div class="container">
+      <div class="col-first">
+        <img src="images/logo.svg" alt="" class="logo">
+      </div>
+      <div class="col-second">
+        <nav class="nav">
+          <ul>
+            <li><a href="">MEET CANDIDATE</a></li>
+            <li><a href="">ISSUES</a></li>
+            <li><a href="">Updates</a></li>
+            <li><a href="">GET INVOLVED</a></li>
+          </ul>
+        </nav>
+        <div class="btn-generic">
+          <a href="#">Donate</a>
+        </div>
+        <div class="social grid-3">
+          <a href="#"><img src="images/twitter.svg"/></a>
+          <a href="#"><img src="images/facebook.svg"/></a>
+          <a href="#"><img src="images/instagram.svg"/></a>
+         </div>
+      </div>
+      </div>
+      
+      
+  </div>
+   
+    <header id="header">
+      <div class="container-fix">
+        <div class="content">
+          <h1>A fresh new voice for this new era</h1>
+        </div>
+        
+      </div>
+      
+    </header>
+    <main id="main">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.14.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.14.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.14.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.14.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.14.4/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+      <section class="cm-donate bg-secondary">
+          <div class="container">
+            <div class="grid-2">
+              <h2>Donate</h2>
+              <div class="items">
+                <div class="input">
+                  $5
+                </div>
+                <div class="input">
+                  $10
+                </div>
+                <div class="input">
+                  $50
+                </div>
+                <div class="input">
+                  $100
+                </div>
+                <div class="input">
+                  $250
+                </div>
+                <div class="input">
+                  Other
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+      <section class="cm-team-up">
+        <div class="container bg-primary">
+          <div class="content grid-2">
+            <div class="intro">
+              <h2>Team up with Candidate</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </div>
+            <div class="form-team-up">
+              <form action="" >
+                <div class="form-component fc-full">
+                  <input type="text" name="name">
+                  <label for="name">Name</label>
+                </div>
+                <div class="form-component fc-email">
+                  <input type="text" name="email">
+                  <label for="name">Email</label>
+                </div>
+                <div class="form-component fc-zip">
+                  <input type="text" name="zip">
+                  <label for="name">Zip</label>
+                </div>
+                <div class="btn-form">
+                  <input type="submit" value="Sign up for the Campaign">
+                </div>
+                
+                
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      <section class="cm-plan">
+        <div class="container">
+          <div class="title-arrow">
+            <h2>
+              A fresh new plan for Us
+            </h2>
+          </div>
+          
+          <div class="items grid-2">
+            <div class="item">
+              <h3>Candidate’s plan for Education</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="item">
+              <h3>Candidate's plan for Environment</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="item">
+              <h3>Candidate's plan for Environment</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="item">
+              <h3>Candidate's plan for Environment</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="link-more">
+            <a href="#">Get to know the entire plan » </a>
+          </div>
+          <div class="form-newsletter">
+            <form action="" class="grid-4">
+              <div class="form-component">
+                <input type="text" name="name">
+                <label for="">Name</label>
+              </div>
+              <div class="form-component">
+                <input type="text" name="email">
+                <label for="">Email</label>
+              </div>
+              <div class="form-component">
+                <input type="text" name="zip">
+                <label for="">Zip</label>
+              </div>
+              <div class="btn-form">
+                <input type="submit" value="Sign for updates">
+              </div>
+              
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="cm-stories">
+        <div class="container-bg">
+          <div class="grid-4">
+            <div class="story" style="background-image:url('images/img.png')">
+              <div class="date">
+                August 3
+              </div>
+              <h3>
+                <a href="">Update Title, lorep ipsum dolor sit amet consectetur.</a>
+              </h3>
+            </div>
+            <div class="story" style="background-image:url('images/img.png')">
+              <div class="date">
+                August 3
+              </div>
+              <h3>
+                <a href="">Update Title, lorep ipsum dolor sit amet consectetur.</a>
+              </h3>
+            </div>
+            <div class="story" style="background-image:url('images/img.png')">
+              <div class="date">
+                August 3
+              </div>
+              <h3>
+                <a href="">Update Title, lorep ipsum dolor sit amet consectetur.</a>
+              </h3>
+            </div>
+            <div class="story" style="background-image:url('images/img.png')">
+              <div class="date">
+                August 3
+              </div>
+              <h3>
+                <a href="">Update Title, lorep ipsum dolor sit amet consectetur.</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cm-find-event">
+        <div class="container">
+          <div class="content">
+            <div class="title-arrow">
+              <h2>Find an event nearby</h2>
+            </div>
+            <div class="form-events grid-2">
+              <div class="form-component">
+                <input type="text" name="text" autocomplete="off">
+                <label for="">Address, Street, City or ZIP Code</label>
+              </div>
+              <div class="btn-form">
+                <input type="submit" value="find">
+              </div>
+            </div>
+            <div class="items">
+              <article>
+                <div class="col-first">
+                  <img src="images/article.jpg" alt="">
+                  <div class="btn-generic">
+                    <a href="#" class="btn">RSVP</a>
+                  </div>
+                </div>
+                <div class="col-second">
+                  <h3>Campaign Kickoff</h3>
+                  <div class="date">
+                    September 14, 2020, 01:00 PM
+                  </div>
+                  <div class="info">
+                    <p>Big Ben Tavern, 636 Hwy 6, Ste 1000<br/>
+                      Austin, TX</p>
+                    <p class="small">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="col-first">
+                  <img src="images/article.jpg" alt="">
+                  <div class="btn-generic">
+                    <a href="#" class="btn">RSVP</a>
+                  </div>
+                  
+                </div>
+                <div class="col-second">
+                  <h3>Campaign Kickoff</h3>
+                  <div class="date">
+                    September 14, 2020, 01:00 PM
+                  </div>
+                  <div class="info">
+                    <p>Big Ben Tavern, 636 Hwy 6, Ste 1000<br/>
+                      Austin, TX</p>
+                    <p class="small">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+    <footer id="footer" class="bg-primary">
+      <div class="container">
+        <div class="grid-2">
+          <div class="info grid-2">
+            <img src="images/logo.svg" class="logo-img-footer" alt="">
+            <p>This Candidate is a Democrat running for Next Election because we deserve a bold fighter who will lead our Legislature. Together, we will collaboratively develop and implement forward-looking policies to build a prosperous future for our state.
+              <br/>
+              <br/>
+              © 2020 Copyright Candidate - Terms and Conditions
+              <br/>
+              <br/>
+              Built by Tectonica</p>
+          </div>
+          <div class="social grid-3">
+              <a href="#"><img src="images/twitter.svg"/></a>
+              <a href="#"><img src="images/facebook.svg"/></a>
+              <a href="#"><img src="images/instagram.svg"/></a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+  
+</body>
 </html>

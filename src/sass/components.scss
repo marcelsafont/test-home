@@ -1,0 +1,207 @@
+@import "mixins";
+
+.cm-donate{
+    margin-bottom:3rem;
+    padding:3rem 0 2.5rem 0;
+    .items{
+        display:flex;
+        > div.input{
+            margin-left:22px;
+            background-color:$primary;
+            width:96px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            font-family: 'politica-bold';
+            letter-spacing:1.5px;
+            text-transform:uppercase;
+        }
+    }
+    h2{
+        background:url('../images/donate-icon.svg') no-repeat center left;
+        padding-left:6rem;
+    }
+}
+
+.cm-plan{
+    background:url('../images/photo.jpg') no-repeat center bottom $primary;
+    background-size:cover;
+    h2{
+        text-align: center;
+        font-size:3.1rem;
+    }
+    > .container{
+        padding:5rem 4rem;
+    }
+    .items{
+        margin-top:3.1rem;
+        padding:0 4rem;
+        flex-wrap: wrap;
+        .item {
+            flex:0 0 calc(50% - 1.5rem);
+            margin-right:1.5rem;
+            margin-bottom:1rem;
+        }
+    }
+    .link-more{
+        padding:0 5.2rem;
+        text-align: right;
+        margin-top:1rem;
+      
+        a{
+            font-family:'politica-extrabold';
+            color:$white;
+            text-transform: uppercase;
+            letter-spacing:1.1px;
+            font-size:1.2rem;
+        }
+    }
+    .form-newsletter{
+        margin-top:3.5rem;
+        form{
+            justify-content: center;
+            > div{
+                margin:0 10px;
+            }
+            .btn-form{
+                @include btnForm($secondary, $white, $secondary);
+                input{
+                    padding:10px 50px!important;
+                }
+            }
+        }
+    }
+    .title-arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        @include titleArrow($white);
+    }
+}
+
+.cm-team-up{
+    margin-bottom:3rem;
+    .content{
+        padding:35px 80px 35px 60px;
+        .form-team-up{
+            flex-basis:300px;
+            form{
+                display:flex;
+                flex-flow: wrap;
+                justify-content: space-between;
+                .btn-form{
+                    width:100%;
+                    @include btnForm($white, $white, transparent);
+                }  
+                
+                
+            }
+        }
+        .intro{
+            flex-basis:300px;
+            padding-left:5rem;
+            background:url('../images/team-up-icon.svg') no-repeat top left;
+        }
+    }
+    
+}
+
+.cm-stories{
+    margin-bottom:2rem;
+    .story{
+        background-color:$primary;
+        overflow:hidden;
+        height:100vh;
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height:370px;
+        flex-basis:25%;
+        background-repeat:no-repeat;
+        background-size:100%;
+        background-position: center;
+        margin:10px 5px;
+        transition: background-size .3s ease-in;
+        &:hover{
+            background-size:105%;
+        }
+        h3{
+            font-size:1.7rem;
+            padding:2rem;
+            a{
+                color:$white;
+            }
+        }
+        .date{
+           padding:2rem;
+        }
+    }
+}
+
+.cm-find-event{
+    margin-bottom:3rem;
+    *{
+        color:$black;
+    }
+    .container{
+        border: solid 8px $secondary;
+        .content{
+            padding:3rem;
+            .items{
+                margin-top:2rem;
+                article{
+                    display:flex;
+                    margin-bottom:2.8rem;
+                    .col-first{
+                        width:262px;
+                        margin-right:1.5rem;
+                        .btn-generic{
+                            @include genericLink($secondary, $white, $primary, $secondary);
+                            a{
+                                padding-top:1rem;
+                                padding-bottom:1rem;
+                                margin-top:0.5rem;
+                            }
+                        }
+                        h3{
+                            color:$primary;
+                        }
+                        img{
+                            display:block;
+                        }
+                    }
+                    .col-second{
+                        h3{
+                            text-transform: uppercase;
+                            color:$primary;
+                            font-family: 'politica-extrabold';
+                        }
+                    }
+                }
+            }
+
+            .title-arrow{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:0 auto 2rem auto;
+                @include titleArrow($black);
+            }
+
+            .form-events{
+                justify-content: center;
+                .form-component{
+                    width:350px;
+                }
+                .btn-form{
+                    @include btnForm($secondary, $secondary, 'transparent');
+                    input{
+                        padding:10px 50px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

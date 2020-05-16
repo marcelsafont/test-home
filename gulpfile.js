@@ -12,7 +12,7 @@ const gulp = require('gulp'),
 
 //compile scss to css
 function css(){
-	return gulp.src('./src/sass/*.scss')
+	return gulp.src('./src/sass/**/*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
 		outputStyle: 'compressed',
