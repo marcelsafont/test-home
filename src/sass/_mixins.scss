@@ -21,7 +21,7 @@ $terciary:#122251;
 	}
 }
 
-@mixin btnForm( $border: $white, $color:$black, $bg:'transparent') {
+@mixin btnForm( $border: $white, $color:$black, $bg:'transparent', $bghover:'transparent', $colorhover:$white) {
 	input[type=submit] {
 		background-color:$bg;
 		background-image:none;
@@ -35,6 +35,11 @@ $terciary:#122251;
 		letter-spacing:1.5px;
 		outline:none;
 		cursor:pointer;
+		transition: .3s all ease;
+		&:hover{
+			background-color:$bghover;
+			color:$colorhover;
+		}
 	}
 }
 

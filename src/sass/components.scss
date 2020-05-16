@@ -64,7 +64,7 @@
                 margin:0 10px;
             }
             .btn-form{
-                @include btnForm($secondary, $white, $secondary);
+                @include btnForm($secondary, $white, $secondary, $primary, $white);
                 input{
                     padding:10px 50px!important;
                 }
@@ -92,7 +92,7 @@
                 justify-content: space-between;
                 .btn-form{
                     width:100%;
-                    @include btnForm($white, $white, transparent);
+                    @include btnForm($white, $white, transparent, $secondary, $white);
                 }  
                 
                 
@@ -112,17 +112,17 @@
     .story{
         background-color:$primary;
         overflow:hidden;
-        height:100vh;
         display:flex;
         justify-content: space-between;
         flex-direction: column;
-        height:370px;
+        height:auto;
         flex-basis:25%;
         background-repeat:no-repeat;
         background-size:100%;
         background-position: center;
         margin:10px 5px;
         transition: background-size .3s ease-in;
+        cursor:pointer;
         &:hover{
             background-size:105%;
         }
@@ -164,9 +164,6 @@
                                 margin-top:0.5rem;
                             }
                         }
-                        h3{
-                            color:$primary;
-                        }
                         img{
                             display:block;
                         }
@@ -176,6 +173,10 @@
                             text-transform: uppercase;
                             color:$primary;
                             font-family: 'politica-extrabold';
+                            margin-bottom:0.5rem;
+                        }
+                        .date{
+                            font-family: 'inter-bold';
                         }
                     }
                 }
@@ -193,9 +194,10 @@
                 justify-content: center;
                 .form-component{
                     width:350px;
+                    margin-right:1rem;
                 }
                 .btn-form{
-                    @include btnForm($secondary, $secondary, 'transparent');
+                    @include btnForm($secondary, $secondary, 'transparent', $primary, $white);
                     input{
                         padding:10px 50px;
                     }
@@ -203,5 +205,25 @@
             }
             
         }
+    }
+}
+
+@media screen and (min-width:1440px){
+    .cm-stories{
+        .story{
+            height:320px;
+        }
+    }
+}
+
+@media screen and (max-width:1120px){
+    .cm-stories{
+        .story{
+            height:320px;
+        }
+    }
+    .container-fix{
+        width:auto;
+        max-width:1120px;
     }
 }
